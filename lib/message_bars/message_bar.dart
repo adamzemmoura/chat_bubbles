@@ -24,6 +24,7 @@ import 'package:flutter/material.dart';
 /// [messageBarColor] is the color of the message bar
 /// [sendButtonColor] is the color of the send button
 /// [messageBarHintStyle] is the style of the message bar hint
+/// [textFieldFillColor] is the fill color of the text field
 ///
 /// # METHODS
 /// [onTextChanged] is the function which triggers after text every text change
@@ -40,6 +41,7 @@ class MessageBar extends StatelessWidget {
   final Color replyIconColor;
   final Color replyCloseColor;
   final Color messageBarColor;
+  final Color textFieldFillColor;
   final String messageBarHintText;
   final TextStyle messageBarHintStyle;
   final TextStyle textFieldTextStyle;
@@ -60,6 +62,7 @@ class MessageBar extends StatelessWidget {
     this.replyCloseColor = Colors.black12,
     this.messageBarColor = const Color(0xffF4F4F5),
     this.sendButtonColor = Colors.blue,
+    this.textFieldFillColor = Colors.white,
     this.messageBarHintText = "Type your message here",
     this.messageBarHintStyle = const TextStyle(fontSize: 16),
     this.textFieldTextStyle = const TextStyle(color: Colors.black),
@@ -139,10 +142,9 @@ class MessageBar extends StatelessWidget {
                         decoration: InputDecoration(
                           hintText: messageBarHintText,
                           hintMaxLines: 1,
-                          contentPadding: const EdgeInsets.symmetric(
-                              horizontal: 8.0, vertical: 10),
+                          contentPadding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 10),
                           hintStyle: messageBarHintStyle,
-                          fillColor: Colors.white,
+                          fillColor: textFieldFillColor,
                           filled: true,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(30.0),
