@@ -72,9 +72,7 @@ class BubbleSpecialTwo extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
         child: CustomPaint(
           painter: SpecialChatBubbleTwo(
-              color: color,
-              alignment: isSender ? Alignment.topRight : Alignment.topLeft,
-              tail: tail),
+              color: color, alignment: isSender ? Alignment.topRight : Alignment.topLeft, tail: tail),
           child: Container(
             constraints: constraints ??
                 BoxConstraints(
@@ -88,10 +86,8 @@ class BubbleSpecialTwo extends StatelessWidget {
             child: Stack(
               children: <Widget>[
                 Padding(
-                  padding: stateTick
-                      ? EdgeInsets.only(right: 20)
-                      : EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-                  child: Text(
+                  padding: stateTick ? EdgeInsets.only(right: 20) : EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+                  child: SelectableText(
                     text,
                     style: textStyle,
                     textAlign: TextAlign.left,

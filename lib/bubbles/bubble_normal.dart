@@ -83,8 +83,7 @@ class BubbleNormal extends StatelessWidget {
             : Container(),
         Container(
           color: Colors.transparent,
-          constraints: constraints ??
-              BoxConstraints(maxWidth: MediaQuery.of(context).size.width * .8),
+          constraints: constraints ?? BoxConstraints(maxWidth: MediaQuery.of(context).size.width * .8),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
             child: Container(
@@ -111,7 +110,7 @@ class BubbleNormal extends StatelessWidget {
                     padding: stateTick
                         ? EdgeInsets.fromLTRB(12, 6, 28, 6)
                         : EdgeInsets.symmetric(vertical: 6, horizontal: 12),
-                    child: Text(
+                    child: SelectableText(
                       text,
                       style: textStyle,
                       textAlign: TextAlign.left,

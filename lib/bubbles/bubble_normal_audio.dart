@@ -100,10 +100,7 @@ class BubbleNormalAudio extends StatelessWidget {
             : Container(),
         Container(
           color: Colors.transparent,
-          constraints: constraints ??
-              BoxConstraints(
-                  maxWidth: MediaQuery.of(context).size.width * .8,
-                  maxHeight: 70),
+          constraints: constraints ?? BoxConstraints(maxWidth: MediaQuery.of(context).size.width * .8, maxHeight: 70),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
             child: Container(
@@ -164,7 +161,7 @@ class BubbleNormalAudio extends StatelessWidget {
                   Positioned(
                     bottom: 8,
                     right: 25,
-                    child: Text(
+                    child: SelectableText(
                       '${audioTimer(duration ?? 0.0, position ?? 0.0)}',
                       style: textStyle,
                     ),
